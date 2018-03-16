@@ -5,6 +5,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -28,6 +29,9 @@ public class MainActivity extends AppCompatActivity {
         new DownloadUpdate().execute();
     }
 
+    public void ref_btnClick(View view) {
+        new DownloadUpdate().execute();
+    }
 
     private class DownloadUpdate extends AsyncTask<String, Void, String> {
 

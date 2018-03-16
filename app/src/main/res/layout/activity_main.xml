@@ -103,13 +103,21 @@
                     android:textColor="@android:color/white" />
 
             </LinearLayout>
+            <RelativeLayout
+                android:id="@+id/refresh_button"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_marginRight="30dp"
+                android:layout_toRightOf="@+id/linearLayout"
+                android:gravity="right">
 
+            </RelativeLayout>
             <RelativeLayout
                 android:id="@+id/tv_temperature"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginRight="30dp"
-                android:layout_toRightOf="@id/linearLayout"
+                android:layout_toRightOf="@+id/refresh_button"
                 android:gravity="right">
 
 
@@ -117,6 +125,9 @@
                     android:id="@+id/temperature_of_the_day"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
                     android:gravity="right"
                     android:text="28"
                     android:textColor="@android:color/white"
@@ -135,6 +146,17 @@
 
 
             </RelativeLayout>
+
+            <ImageView
+                android:id="@+id/img_refresh_button"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_alignBottom="@+id/linearLayout"
+                android:layout_gravity="center"
+                android:layout_toEndOf="@+id/linearLayout"
+                android:layout_toRightOf="@+id/linearLayout"
+                android:onClick="ref_btnClick"
+                app:srcCompat="@drawable/refresh_button" />
 
 
         </RelativeLayout>
@@ -173,27 +195,35 @@
             <ImageView
                 android:layout_width="48dp"
                 android:layout_height="48dp"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
                 app:srcCompat="@drawable/rainy_small" />
-
-            <TextView
-                android:layout_width="match_parent"
+            <Button
+                android:id="@+id/mon_button"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:background="@drawable/blue_background"
                 android:gravity="center"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
                 android:text="mon"
-                android:textAllCaps="true"
-                android:textColor="#909090" />
+                android:textColor="#50ffffff" />
         </LinearLayout>
+
+
 
         <LinearLayout
             android:layout_width="0dp"
-            android:layout_height="wrap_content"
+            android:layout_height="69dp"
             android:layout_weight="1"
             android:gravity="center"
             android:orientation="vertical">
 
             <ImageView
                 android:layout_width="48dp"
-                android:layout_height="48dp"
+                android:layout_height="52dp"
                 app:srcCompat="@drawable/partly_sunny_small" />
 
             <TextView
