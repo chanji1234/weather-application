@@ -45,7 +45,6 @@ public class MainActivity extends AppCompatActivity {
             try {
                 URL url = new URL(stringUrl);
 
-                // Create the request to get the information from the server, and open the connection
                 urlConnection = (HttpURLConnection) url.openConnection();
 
                 urlConnection.setRequestMethod("GET");
@@ -55,7 +54,6 @@ public class MainActivity extends AppCompatActivity {
                 InputStream inputStream = urlConnection.getInputStream();
                 StringBuffer buffer = new StringBuffer();
                 if (inputStream == null) {
-                    // Nothing to do.
                     return null;
                 }
                 reader = new BufferedReader(new InputStreamReader(inputStream));
